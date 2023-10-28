@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply text-1 text-black font-300 font-iconic;
+  }
+
+  a,
+  button {
+    @apply focus-visible:outline-lightblue;
+  }
+
+  input,
+  textarea {
+    @apply focus:outline-none;
+  }
+}
