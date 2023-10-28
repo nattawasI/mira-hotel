@@ -1,4 +1,5 @@
 @import 'tailwindcss/base';
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@500,400&display=swap');
 
 @import 'tailwindcss/components';
 
@@ -6,12 +7,11 @@
 
 @layer base {
   body {
-    @apply text-1 text-black font-300 font-iconic;
+    @apply font-general font-normal text-1 text-black;
   }
 
   a,
   button {
-    @apply focus-visible:outline-lightblue;
   }
 
   input,

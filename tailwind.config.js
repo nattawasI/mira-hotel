@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,7 +7,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/modules/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   future: {
     hoverOnlyWhenSupported: true,
@@ -14,20 +15,9 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      primary: '#2E3192',
-      black: '#2C2C32',
-      'gray-50': '#7E838D',
-      'gray-25': '#ADADBD',
-      'gray-15': '#CECEDD',
-      lightblue: '#6E87C4',
-      'lightblue-10': '#E2E8F6',
-      white: '#ffffff',
-      highlight1: '#FF5C00',
-      'highlight1-50': '#FC9F6B',
-      'highlight1-10': '#F6EBE5',
-      highlight2: '#8FE4FF',
-      green: '#44A789',
-      red: '#E03434',
+      black: '#0F0F0F',
+      primary: '#686636',
+      secondary: '#D6CFC8',
     },
     spacing: {
       0: '0',
@@ -47,26 +37,16 @@ module.exports = {
       3.75: '3.75rem', // 60px
     },
     fontSize: {
-      0.75: ['0.75rem', '1.125rem'],
-      0.875: ['0.875rem', '1.625rem'],
-      1: ['1rem', '1.75rem'],
-      1.125: ['1.125rem', '2.125rem'],
-      1.25: ['1.25rem', '2.375rem'],
-      1.375: ['1.375rem', '2.375rem'],
-      1.625: ['1.625rem', '2.625rem'],
-      1.75: ['1.75rem', '2.625rem'],
-      2.5: ['2.5rem', '3.625rem'],
-      3: ['3rem', '4rem'],
+      1: ['1rem', '1.375rem'],
     },
     fontWeight: {
-      300: '300',
-      500: '500',
+      normal: '400',
+      medium: '500',
     },
     extend: {
       fontFamily: {
-        iconic: ['var(--font-FCIconic)', 'sans-serif'],
+        general: ['"General Sans"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [require('@headlessui/tailwindcss')],
 }
