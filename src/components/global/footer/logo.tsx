@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Logo = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-center md:justify-start">
+    <div className="inline-flex flex-col items-center gap-y-1 md:gap-y-1.5">
       <Link href="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="156" height="46" viewBox="0 0 156 46" fill="none">
           <path
@@ -32,7 +32,7 @@ const Logo = (): JSX.Element => {
           />
         </svg>
       </Link>
-      <span className="mt-1 text-center text-0.875 md:mt-1.5 md:text-left">&copy; 2023 mira.com</span>
+      <span className="text-center text-0.875 md:text-left">&copy; 2023 mira.com</span>
     </div>
   )
 }
