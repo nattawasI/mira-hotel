@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply font-general font-normal text-1 text-black;
+    @apply min-h-screen font-general font-normal text-1 text-black;
   }
 
   a,
@@ -17,5 +17,15 @@
   input,
   textarea {
     @apply focus:outline-none;
+  }
+}
+
+@layer utilities {
+  .content-container {
+    @apply mx-auto px-1.75 max-w-[72.5rem];
+  }
+
+  .transition-hover-colors {
+    @apply transition-colors duration-150;
   }
 }
