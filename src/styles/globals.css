@@ -20,6 +20,16 @@
   }
 }
 
+@layer components {
+  .title-uppercase {
+    @apply lg:text-1.25 text-0.875 font-medium uppercase tracking-[0.225rem];
+  }
+
+  .title-large {
+    @apply text-2.375 lg:text-3.125;
+  }
+}
+
 @layer utilities {
   .content-container {
     @apply mx-auto max-w-[72.5rem] px-1.25;
