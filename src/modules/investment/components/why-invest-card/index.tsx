@@ -12,7 +12,10 @@ type WhyInvestCardProps = Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
 const WhyInvestCard = (props: WhyInvestCardProps) => {
   const { srcImage, title, description, className, ...restProps } = props
   return (
-    <div {...restProps} className={cln('relative aspect-square overflow-hidden rounded-xl', className)}>
+    <div
+      {...restProps}
+      className={cln('relative aspect-square overflow-hidden rounded-xl sm:aspect-video lg:aspect-square', className)}
+    >
       <Image src={srcImage} alt={title ?? ''} fill className="object-cover object-center" />
       <div
         className={cln(

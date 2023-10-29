@@ -1,7 +1,11 @@
 'use client'
 
 /** components */
-import WhyInvestAccordion from '@/modules/investment/components/why-invest-accordion'
+import WhyInvestAccordion from '@/modules/investment/template/why-invest/why-invest-accordion'
+import WhyInvestSlide from '@/modules/investment/template/why-invest/why-invest-slide'
+
+/** hooks */
+import { useMediaQuery } from '@mantine/hooks'
 
 export type WhyInvestType = {
   id: string
@@ -19,7 +23,7 @@ const whyInvestList: WhyInvestType[] = [
   },
   {
     id: 'strategic-locations',
-    srcImage: '/investment/why-invest.jpg',
+    srcImage: '/investment/investment-hero.jpg',
     title: 'Strategic Locations',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
@@ -31,19 +35,22 @@ const whyInvestList: WhyInvestType[] = [
   },
   {
     id: 'sustainable-growth',
-    srcImage: '/investment/why-invest.jpg',
+    srcImage: '/investment/investment-hero.jpg',
     title: 'Sustainable Growth',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   },
 ]
 
 const WhyInvest = (): JSX.Element => {
+  const isDesktop = useMediaQuery('(min-width: 1024px)')
+
   return (
     <div className="content-container py-2">
-      <div className="rounded-xl bg-primary px-1.25 py-1.5 lg:px-3">
-        <p className="title-uppercase mb-1 text-secondary">Why Invest with Mira?</p>
-        <WhyInvestAccordion data={whyInvestList} />
-      </div>
+      {typeof isDesktop !== 'undefined' ? (
+        <div className="rounded-xl bg-primary px-1.25 py-1.5 lg:px-3">
+          {isDesktop ? <WhyInvestSlide data={whyInvestList} /> : <WhyInvestAccordion data={whyInvestList} />}
+        </div>
+      ) : null}
     </div>
   )
 }

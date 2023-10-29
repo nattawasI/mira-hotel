@@ -8,13 +8,14 @@ type WhyInvestButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const WhyInvestButton = forwardRef<HTMLButtonElement, WhyInvestButtonProps>((props, forwardedRef) => {
   const { isActive, className, children, ...restProps } = props
+
   return (
     <button
       {...restProps}
       ref={forwardedRef}
       className={cln(
-        'lg:text-2.25 flex w-full items-center gap-0.75 py-0.5 text-[1.5rem] leading-[3.75rem] text-secondary lg:py-1',
-        isActive ? 'font-medium' : '',
+        'xl:text-2.25 text-1.5 flex min-h-[3.75rem] w-full items-center justify-between gap-0.75 py-0.5 text-left text-secondary lg:py-1',
+        isActive ? 'text-yellow font-medium' : '',
         className,
       )}
     >

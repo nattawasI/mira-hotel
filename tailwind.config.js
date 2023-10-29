@@ -12,6 +12,22 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+    screens: {
+      'max-sm': { max: '639px' }, // => @media (max-width: 639px) { ... }
+
+      sm: '640px', // => @media (min-width: 640px) { ... }
+
+      'max-md': { max: '767px' }, // => @media (max-width: 767px) { ... }
+
+      md: '768px', // => @media (min-width: 768px) { ... }
+
+      'max-lg': { max: '1023px' }, // => @media (max-width: 1023px) { ... }
+
+      lg: '1024px', // => @media (min-width: 1024px) { ... }
+
+      'max-xl': { max: '1199px' }, // => @media (max-width: 1199px) { ... }
+      xl: '1200px', // => @media (min-width: 1200px) { ... }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -37,6 +53,7 @@ module.exports = {
       2.75: '2.75rem', // 44px
       3: '3rem', // 48px
       3.75: '3.75rem', // 60px
+      4: '4rem', // 64px
     },
     fontSize: {
       0.75: ['0.75rem', '1rem'],
@@ -44,6 +61,7 @@ module.exports = {
       1: ['1rem', '1.36rem'],
       1.25: ['1.125rem', '1.69rem'],
       1.375: ['1.375rem', '1.88rem'],
+      1.5: ['1.5rem', '2rem'],
       2.25: ['2.25rem', '3.75rem'],
       2.375: ['2.375rem', '3.19rem'],
       3.125: ['3.125rem', '3.75rem'],

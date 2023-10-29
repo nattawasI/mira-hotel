@@ -9,8 +9,8 @@ const Hero = (): JSX.Element => {
     <div className="bg-yellow grid grid-cols-1 lg:h-screen lg:grid-cols-2">
       <div className="lg:flex lg:items-center lg:justify-end">
         <div className="flex flex-col items-center px-1.25 pb-2 pt-[8.5rem] text-center lg:w-[36.25rem] lg:items-start lg:pb-0 lg:pr-[7rem] lg:pt-0 lg:text-left">
-          <p className="title-uppercase mb-0.5 lg:mb-0.75">Welcome to Mira Investments</p>
-          <h1 className="title-large">Embark on your investment journey</h1>
+          <h1 className="title-uppercase mb-0.5 lg:mb-0.75">Welcome to Mira Investments</h1>
+          <h2 className="title-large">Embark on your investment journey</h2>
           <p className="mt-1">
             Step into a World of Investment Excellence with Mira. Our journey to redefine the investment experience
             starts here.

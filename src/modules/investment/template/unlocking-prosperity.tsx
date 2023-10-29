@@ -1,15 +1,12 @@
 /** libs */
-
 import { cln } from '@/libs/utils'
-
-/** components */
 
 const UnlockingProsperity = (): JSX.Element => {
   return (
     <>
       <div className="content-container flex flex-col items-center pb-2 pt-[4.7rem] text-center sm:pt-[9.38rem]">
-        <p className="title-uppercase mb-0.5">Unlocking Prosperity</p>
-        <h2 className="title-large">Your path to global real estate</h2>
+        <h2 className="title-uppercase mb-0.5">Unlocking Prosperity</h2>
+        <h3 className="title-large">Your path to global real estate</h3>
         <p className="mt-1.5">
           At Mira, our vision extends far beyond the horizon.
           <br />
