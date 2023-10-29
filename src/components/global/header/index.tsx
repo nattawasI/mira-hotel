@@ -5,11 +5,15 @@ import Link from 'next/link'
 /** components */
 import Menu from '@/components/global/header/menu'
 
-type HeaderProps = HTMLAttributes<HTMLDivElement>
+/** types */
+import { ThemeProps } from '@/components/global/types'
+
+type HeaderProps = HTMLAttributes<HTMLDivElement> & ThemeProps
 
 const Header = (props: HeaderProps): JSX.Element => {
+  const { theme = 'dark', ...restProps } = props
   return (
-    <header {...props}>
+    <header {...restProps}>
       <div className="content-container flex justify-between pt-1.75">
         <Link href="/">
           <svg xmlns="http://www.w3.org/2000/svg" width="87" height="26" viewBox="0 0 87 26" fill="none">

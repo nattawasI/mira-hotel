@@ -30,7 +30,11 @@ const menus: MenuType[] = [
   },
 ]
 
-const Menu = (): JSX.Element => {
+type MenuProps = {
+  theme?: 'dark' | 'light'
+}
+
+const Menu = ({ theme }: MenuProps): JSX.Element => {
   const pathname = usePathname()
   return (
     <Popover.Root>
@@ -51,7 +55,7 @@ const Menu = (): JSX.Element => {
             key={index}
             href={item.href}
             className={cln(
-              'transition-hover-colors block text-1 leading-[2.375rem] hover:text-primary',
+              'transition-colors-150 block text-1 leading-[2.375rem] hover:text-primary',
               item.href === pathname ? 'font-medium' : '',
             )}
           >
