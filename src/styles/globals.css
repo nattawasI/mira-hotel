@@ -22,7 +22,7 @@
 
 @layer utilities {
   .content-container {
-    @apply mx-auto max-w-[72.5rem] px-1.75;
+    @apply mx-auto max-w-[72.5rem] px-1.25;
   }
 
   .transition-colors-150 {

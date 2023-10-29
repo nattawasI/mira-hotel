@@ -19,6 +19,7 @@ module.exports = {
       white: '#FFFFFF',
       primary: '#686636',
       secondary: '#D6CFC8',
+      yellow: '#CA9214',
     },
     spacing: {
       0: '0',
@@ -41,6 +42,7 @@ module.exports = {
       0.75: ['0.75rem', '1rem'],
       0.875: ['0.875rem', '1.25rem'],
       1: ['1rem', '1.375rem'],
+      2.375: ['2.375rem', '3.1875rem'],
     },
     fontWeight: {
       normal: '400',

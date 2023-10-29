@@ -1,6 +1,7 @@
 /** libs */
 import { HTMLAttributes } from 'react'
 import Link from 'next/link'
+import { cln } from '@/libs/utils'
 
 /** components */
 import Menu from '@/components/global/header/menu'
@@ -11,9 +12,9 @@ import { ThemeProps } from '@/components/global/types'
 type HeaderProps = HTMLAttributes<HTMLDivElement> & ThemeProps
 
 const Header = (props: HeaderProps): JSX.Element => {
-  const { theme = 'dark', ...restProps } = props
+  const { theme = 'dark', className, ...restProps } = props
   return (
-    <header {...restProps}>
+    <header {...restProps} className={cln('fixed left-0 top-0 z-30 w-full', className)}>
       <div className="content-container flex justify-between pt-1.75">
         <Link href="/">
           <svg xmlns="http://www.w3.org/2000/svg" width="87" height="26" viewBox="0 0 87 26" fill="none">
