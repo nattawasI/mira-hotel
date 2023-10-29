@@ -41,10 +41,11 @@ module.exports = {
     fontSize: {
       0.75: ['0.75rem', '1rem'],
       0.875: ['0.875rem', '1.25rem'],
-      1: ['1rem', '1.375rem'],
-      1.25: ['1.125rem', '1.688rem'],
-      1.375: ['1.375rem', '1.875rem'],
-      2.375: ['2.375rem', '3.1875rem'],
+      1: ['1rem', '1.36rem'],
+      1.25: ['1.125rem', '1.69rem'],
+      1.375: ['1.375rem', '1.88rem'],
+      2.25: ['2.25rem', '3.75rem'],
+      2.375: ['2.375rem', '3.19rem'],
       3.125: ['3.125rem', '3.75rem'],
     },
     fontWeight: {
@@ -54,6 +55,20 @@ module.exports = {
     extend: {
       fontFamily: {
         general: ['"General Sans"', ...defaultTheme.fontFamily.sans],
+      },
+      keyframes: {
+        slideDown: {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },
     },
   },
