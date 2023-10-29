@@ -21,7 +21,7 @@ const WhyInvestCard = (props: WhyInvestCardProps) => {
         )}
       >
         <div className="relative flex flex-col gap-0.5 text-secondary">
-          <h4 className="lg:text-1.25 text-1">{title}</h4>
+          <h4 className="lg:text-1.25 text-1 font-medium">{title}</h4>
           <p className="text-0.875 lg:text-1">{description}</p>
         </div>
       </div>
