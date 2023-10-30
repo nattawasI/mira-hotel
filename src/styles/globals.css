@@ -22,11 +22,11 @@
 
 @layer components {
   .title-uppercase {
-    @apply lg:text-1.25 text-0.875 font-medium uppercase tracking-[0.225rem];
+    @apply text-0.875 font-medium uppercase tracking-[0.225rem] lg:text-1.25;
   }
 
   .title-large {
-    @apply text-2.375 lg:text-3.125;
+    @apply text-2 lg:text-3.125;
   }
 }
 

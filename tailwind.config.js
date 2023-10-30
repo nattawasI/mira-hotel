@@ -34,8 +34,8 @@ module.exports = {
       black: '#0F0F0F',
       white: '#FFFFFF',
       primary: '#686636',
-      secondary: '#D6CFC8',
-      yellow: '#CA9214',
+      base: '#D6CFC8',
+      secondary: '#CA9214',
     },
     spacing: {
       0: '0',
@@ -56,14 +56,13 @@ module.exports = {
       4: '4rem', // 64px
     },
     fontSize: {
+      0.625: ['0.625rem', '0.875rem'],
       0.75: ['0.75rem', '1rem'],
-      0.875: ['0.875rem', '1.25rem'],
-      1: ['1rem', '1.36rem'],
-      1.25: ['1.125rem', '1.69rem'],
-      1.375: ['1.375rem', '1.88rem'],
-      1.5: ['1.5rem', '2rem'],
-      2.25: ['2.25rem', '3.75rem'],
-      2.375: ['2.375rem', '3.19rem'],
+      0.875: ['0.875rem', '1.375rem'],
+      1: ['1rem', '1.375rem'],
+      1.25: ['1.125rem', '1.6875rem'],
+      1.375: ['1.375rem', '1.875rem'],
+      2: ['2rem', '3.0625rem'],
       3.125: ['3.125rem', '3.75rem'],
     },
     fontWeight: {

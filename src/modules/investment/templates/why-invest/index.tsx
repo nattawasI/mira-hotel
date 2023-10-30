@@ -1,8 +1,11 @@
 'use client'
 
+/** libs */
+import { useState } from 'react'
+
 /** components */
-import WhyInvestAccordion from '@/modules/investment/template/why-invest/why-invest-accordion'
-import WhyInvestSlide from '@/modules/investment/template/why-invest/why-invest-slide'
+import WhyInvestAccordion from '@/modules/investment/templates/why-invest/why-invest-accordion'
+import WhyInvestSlide from '@/modules/investment/templates/why-invest/why-invest-slide'
 
 /** hooks */
 import { useMediaQuery } from '@mantine/hooks'
@@ -44,11 +47,17 @@ const whyInvestList: WhyInvestType[] = [
 const WhyInvest = (): JSX.Element => {
   const isDesktop = useMediaQuery('(min-width: 1024px)')
 
+  const [active, setActive] = useState<string>('0')
+
   return (
     <div className="content-container py-2">
       {typeof isDesktop !== 'undefined' ? (
         <div className="rounded-xl bg-primary px-1.25 py-1.5 lg:px-3">
-          {isDesktop ? <WhyInvestSlide data={whyInvestList} /> : <WhyInvestAccordion data={whyInvestList} />}
+          {isDesktop ? (
+            <WhyInvestSlide data={whyInvestList} active={active} setActive={setActive} />
+          ) : (
+            <WhyInvestAccordion data={whyInvestList} active={active} setActive={setActive} />
+          )}
         </div>
       ) : null}
     </div>

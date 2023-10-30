@@ -1,5 +1,5 @@
 /** modules */
-import InvestmentTemplate from '@/modules/investment/template'
+import InvestmentTemplate from '@/modules/investment/templates'
 
 export default function InvestmentPage() {
   return <InvestmentTemplate />

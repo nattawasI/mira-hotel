@@ -8,24 +8,26 @@ import WhyInvestButton from '@/modules/investment/components/why-invest-button'
 import WhyInvestCard from '@/modules/investment/components/why-invest-card'
 
 /** types */
-import { WhyInvestType } from '@/modules/investment/template/why-invest'
+import { WhyInvestType } from '@/modules/investment/templates/why-invest'
 
 type WhyInvestAccordionProps = {
   data: WhyInvestType[]
+  active: string
+  setActive: (value: string) => void
 }
 
 const WhyInvestAccordion = (props: WhyInvestAccordionProps): JSX.Element => {
-  const { data } = props
+  const { data, active, setActive } = props
 
   return (
     <>
-      <h2 className="title-uppercase mb-1 text-secondary">Why Invest with Mira?</h2>
-      <Accordion.Root type="single" defaultValue={data[0].id} collapsible>
-        {data.map((item) => (
-          <Accordion.Item key={item.id} className="border-t border-secondary first:border-0" value={item.id}>
+      <h2 className="title-uppercase text-base mb-1">Why Invest with Mira?</h2>
+      <Accordion.Root type="single" collapsible value={active} onValueChange={setActive}>
+        {data.map((item, index) => (
+          <Accordion.Item key={item.id} className="border-base border-t first:border-0" value={index.toString()}>
             <Accordion.Header>
               <Accordion.Trigger asChild>
-                <WhyInvestButton className="data-[state=open]:text-yellow group data-[state=open]:font-medium">
+                <WhyInvestButton className="group data-[state=open]:text-secondary">
                   {item.title}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +45,7 @@ const WhyInvestAccordion = (props: WhyInvestAccordionProps): JSX.Element => {
                 </WhyInvestButton>
               </Accordion.Trigger>
             </Accordion.Header>
-            <Accordion.Content className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden">
+            <Accordion.Content className="overflow-hidden data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
               <div className="py-0.5">
                 <WhyInvestCard srcImage={item.srcImage} title={item.title} description={item.description} />
               </div>

@@ -14,8 +14,9 @@ const WhyInvestButton = forwardRef<HTMLButtonElement, WhyInvestButtonProps>((pro
       {...restProps}
       ref={forwardedRef}
       className={cln(
-        'xl:text-2.25 text-1.5 flex min-h-[3.75rem] w-full items-center justify-between gap-0.75 py-0.5 text-left text-secondary lg:py-1',
-        isActive ? 'text-yellow font-medium' : '',
+        'text-base sm:text-2 flex h-[3.38rem] w-full items-center justify-between gap-0.75 text-left text-1.25 sm:h-[4.25rem]',
+        'transition-all duration-150',
+        isActive ? 'text-secondary' : '',
         className,
       )}
     >

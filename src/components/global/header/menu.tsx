@@ -48,7 +48,7 @@ const Menu = ({ theme }: MenuProps): JSX.Element => {
         sideOffset={8}
         align="end"
         alignOffset={-8}
-        className="w-[12rem] rounded-md bg-secondary px-1.5 py-1 shadow-lg"
+        className="bg-base w-[12rem] rounded-md px-1.5 py-1 shadow-lg"
       >
         {menus.map((item, index) => (
           <Link
