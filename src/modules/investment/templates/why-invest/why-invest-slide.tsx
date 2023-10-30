@@ -65,6 +65,7 @@ const WhyInvestSlide = (props: WhyInvestSlideProps): JSX.Element => {
             arrows: false,
             speed: 700,
             drag: false,
+            pagination: false,
           }}
         >
           {data.map((item) => (

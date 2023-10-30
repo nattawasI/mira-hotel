@@ -26,7 +26,7 @@ const UnlockingProsperity = (): JSX.Element => {
           'lg:h-[31.25rem]',
           'bg-[url("/investment/vector-dotted-map-of-world-small.png")]',
           'sm:bg-[url("/investment/vector-dotted-map-of-world.png")]',
-          'bg-[length:auto_100%] bg-center',
+          'bg-[length:auto_100%] bg-center bg-no-repeat',
         )}
       >
         <div className="text-center">
