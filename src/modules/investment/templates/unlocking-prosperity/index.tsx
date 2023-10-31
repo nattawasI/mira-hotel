@@ -4,22 +4,20 @@ import { cln } from '@/libs/utils'
 const UnlockingProsperity = (): JSX.Element => {
   return (
     <>
-      <div className="content-container flex flex-col items-center pb-2 pt-[4.7rem] text-center sm:pt-[9.38rem]">
-        <div className="mb-1.5 flex flex-col gap-y-0.5">
-          <h2 className="title-uppercase">Unlocking Prosperity</h2>
-          <h3 className="title-large">Your path to global real estate</h3>
+      <div className="content-container flex justify-center pb-2 pt-[4.7rem] sm:pt-[9.38rem]">
+        <div className="heading-lead">
+          <h2 className="heading-lead__title">Unlocking Prosperity</h2>
+          <h3 className="heading-lead__title-large">Your path to global real estate</h3>
+          <div className="heading-lead__description">
+            <p>At Mira, our vision extends far beyond the horizon.</p>
+            <p>We are committed to creating investment opportunities that redefine your financial landscape.</p>
+            <p>
+              With Mira, your investments can transport you to exciting destinations while yielding exceptional returns.
+              <br />
+              Let&apos;s explore the heart of this adventure.
+            </p>
+          </div>
         </div>
-        <p>
-          At Mira, our vision extends far beyond the horizon.
-          <br />
-          <br />
-          We are committed to creating investment opportunities that redefine your financial landscape.
-          <br />
-          <br />
-          With Mira, your investments can transport you to exciting destinations while yielding exceptional returns.
-          <br />
-          Let&apos;s explore the heart of this adventure.
-        </p>
       </div>
       <div
         className={cln(

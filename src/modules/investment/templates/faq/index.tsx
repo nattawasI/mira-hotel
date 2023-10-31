@@ -34,9 +34,9 @@ const faqList: FaqType[] = [
 const Faq = (): JSX.Element => {
   return (
     <div className="content-container pb-2 pt-[4.70rem] lg:pt-[9.38rem]">
-      <div className="mb-3 flex flex-col items-center gap-y-0.5 lg:mb-[3.5rem]">
-        <h2 className="title-uppercase">FAQ</h2>
-        <h3 className="title-large">Addressing common questions</h3>
+      <div className="heading-lead mb-3 lg:mb-[3.5rem]">
+        <h2 className="heading-lead__title">FAQ</h2>
+        <h3 className="heading-lead__title-large">Addressing common questions</h3>
       </div>
       <Accordion.Root type="multiple">
         {faqList.map((item, index) => (

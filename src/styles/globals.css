@@ -29,6 +29,22 @@
   .title-large {
     @apply text-2 lg:text-3.125;
   }
+
+  .heading-lead {
+    @apply flex flex-col items-center text-center;
+  }
+
+  .heading-lead__title {
+    @apply title-uppercase mb-0.5;
+  }
+
+  .heading-lead__title-large {
+    @apply title-large;
+  }
+
+  .heading-lead__description {
+    @apply mt-1.5 flex flex-col gap-y-2;
+  }
 }
 
 @layer utilities {
