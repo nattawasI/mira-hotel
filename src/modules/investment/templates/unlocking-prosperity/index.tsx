@@ -5,9 +5,11 @@ const UnlockingProsperity = (): JSX.Element => {
   return (
     <>
       <div className="content-container flex flex-col items-center pb-2 pt-[4.7rem] text-center sm:pt-[9.38rem]">
-        <h2 className="title-uppercase mb-0.5">Unlocking Prosperity</h2>
-        <h3 className="title-large">Your path to global real estate</h3>
-        <p className="mt-1.5">
+        <div className="mb-1.5 flex flex-col gap-y-0.5">
+          <h2 className="title-uppercase">Unlocking Prosperity</h2>
+          <h3 className="title-large">Your path to global real estate</h3>
+        </div>
+        <p>
           At Mira, our vision extends far beyond the horizon.
           <br />
           <br />
