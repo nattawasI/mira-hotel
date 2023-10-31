@@ -32,7 +32,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       black: '#0F0F0F',
-      white: '#FFFFFF',
+      white: '#E9E3DC',
       primary: '#686636',
       base: '#D6CFC8',
       secondary: '#CA9214',

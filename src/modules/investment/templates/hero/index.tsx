@@ -20,7 +20,7 @@ const Hero = (): JSX.Element => {
             <br />
             Unveil a realm of endless possibilities where your investments can flourish.
           </p>
-          <Button icon="arrow-down" className="mt-2">
+          <Button icon="arrow-right" className="mt-2">
             Investment opportunities
           </Button>
         </div>
