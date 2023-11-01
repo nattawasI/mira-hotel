@@ -17,7 +17,7 @@ const SelectRoot = forwardRef<HTMLButtonElement, SelectProps>((props, forwardedR
         className={cln(
           'flex h-[3.125rem] items-center justify-between rounded-lg border border-black bg-transparent px-1 text-0.875',
           'focus:border-primary focus:outline-none',
-          'data-[placeholder]:text-[rgba(15,_15,_15,_0.50)]',
+          'data-[placeholder]:text-black-50',
           'data-[state=open]:border-primary',
           className,
         )}
@@ -33,7 +33,7 @@ const SelectRoot = forwardRef<HTMLButtonElement, SelectProps>((props, forwardedR
       <SelectPrimitive.Content
         sideOffset={4}
         position="popper"
-        className="max-h-200 w-[var(--radix-select-trigger-width)] overflow-y-auto rounded-lg bg-white shadow"
+        className="max-h-200 w-[var(--radix-select-trigger-width)] overflow-y-auto rounded-lg border border-primary bg-white shadow"
       >
         <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
       </SelectPrimitive.Content>
@@ -52,7 +52,7 @@ const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>((props, forwarded
       {...restProps}
       ref={forwardedRef}
       className={cln(
-        'cursor-pointer p-1 outline-none data-[highlighted]:bg-secondary data-[state=checked]:bg-primary',
+        'data-[highlighted]:bg-primary-25 data-[state=checked]:bg-primary-50 data-[state=checked]:data-[highlighted]:bg-primary-50 cursor-pointer p-1 outline-none',
         className,
       )}
     >

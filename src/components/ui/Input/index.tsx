@@ -13,7 +13,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props, forwardedRef): JS
       ref={forwardedRef}
       type={type}
       className={cln(
-        'flex h-[3.125rem] items-center rounded-lg border border-black bg-transparent px-1 text-0.875 placeholder:text-[rgba(15,_15,_15,_0.50)] focus:border-primary',
+        'placeholder:text-black-50 flex h-[3.125rem] items-center rounded-lg border border-black bg-transparent px-1 text-0.875 focus:border-primary',
         className,
       )}
     />
