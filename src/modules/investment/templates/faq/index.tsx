@@ -46,7 +46,7 @@ const Faq = (): JSX.Element => {
             value={item.id}
           >
             <Accordion.Header>
-              <Accordion.Trigger className="text-1.2 group/faq-header flex w-full justify-between gap-x-0.75 overflow-hidden py-1 text-left lg:text-2">
+              <Accordion.Trigger className="text-1.2 group/faq-header flex w-full items-center justify-between gap-x-0.75 overflow-hidden py-1 text-left lg:text-2">
                 <span>{item.question}</span>
                 <span className="h-1.5 w-1.5 flex-shrink-0 transition-transform duration-300 group-data-[state=open]/faq-header:rotate-180 lg:h-[2.625rem] lg:w-[2.625rem]">
                   <svg
