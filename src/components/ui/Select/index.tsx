@@ -33,7 +33,7 @@ const SelectRoot = forwardRef<HTMLButtonElement, SelectProps>((props, forwardedR
       <SelectPrimitive.Content
         sideOffset={4}
         position="popper"
-        className="max-h-200 w-[var(--radix-select-trigger-width)] overflow-y-auto rounded-lg border border-primary bg-white shadow"
+        className="max-h-200 no-scrollbar w-[var(--radix-select-trigger-width)] overflow-y-auto rounded-lg border border-primary bg-white shadow"
       >
         <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
       </SelectPrimitive.Content>
