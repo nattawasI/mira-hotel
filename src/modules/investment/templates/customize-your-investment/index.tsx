@@ -1,3 +1,6 @@
+/** components */
+import HowMuchYouInvest from '@/modules/investment/components/how-much-you-invest'
+
 const CustomizeYourInvestment = (): JSX.Element => {
   return (
     <div className="content-container pb-2 pt-[4.70rem] lg:pt-[9.38rem]">
@@ -22,11 +25,9 @@ const CustomizeYourInvestment = (): JSX.Element => {
             Protect your portfolio against inflation with high recurring income and long-term property appreciation.
           </p>
         </div>
-        <div className="rounded-xl p-2">
-          <div className="mb-1 flex flex-wrap items-end justify-between gap-0.75">
-            <span className="text-1.375 font-medium lg:text-1.25">How much you invest</span>
-            <span className="text-0.875">($10,000 minimum)</span>
-          </div>
+        <div>
+          <HowMuchYouInvest />
+          <div className="mt-1 text-center text-base">Management fee: 0.65% of GAV</div>
         </div>
       </div>
     </div>
