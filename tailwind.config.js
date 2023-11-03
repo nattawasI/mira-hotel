@@ -25,8 +25,8 @@ module.exports = {
 
       lg: '1024px', // => @media (min-width: 1024px) { ... }
 
-      'max-xl': { max: '1199px' }, // => @media (max-width: 1199px) { ... }
-      xl: '1200px', // => @media (min-width: 1200px) { ... }
+      'max-xl': { max: '1239px' }, // => @media (max-width: 1239px) { ... }
+      xl: '1240px', // => @media (min-width: 1240px) { ... }
     },
     colors: {
       transparent: 'transparent',

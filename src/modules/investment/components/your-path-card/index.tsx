@@ -15,7 +15,7 @@ const YourPathCard = forwardRef<HTMLDivElement, YourPathCardProps>((props, forwa
     <div
       {...restProps}
       ref={forwardRef}
-      className={cln('flex w-[17rem] flex-col overflow-hidden rounded-xl', className)}
+      className={cln('flex w-[17.25rem] flex-col overflow-hidden rounded-xl', className)}
     >
       <div className="relative aspect-square">
         <Image src={srcImage} alt={title} fill className="object-cover object-center" />

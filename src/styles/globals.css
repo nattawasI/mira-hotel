@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply min-h-screen font-general text-1 font-normal text-black;
+    @apply min-h-screen overflow-x-hidden font-general text-1 font-normal text-black;
   }
 
   a,
@@ -49,7 +49,7 @@
 
 @layer utilities {
   .content-container {
-    @apply mx-auto max-w-[72.5rem] px-1.25;
+    @apply mx-auto max-w-[77.5rem] px-1.25;
   }
 
   .transition-colors-150 {
