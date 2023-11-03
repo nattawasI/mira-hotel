@@ -4,7 +4,14 @@ import { cln } from '@/libs/utils'
 /** components */
 import YourPathCard from '@/modules/investment/components/your-path-card'
 
-const dataList = [
+type YourPathItemType = {
+  id: string
+  title: string
+  description: string
+  srcImage: string
+}
+
+const dataList: YourPathItemType[] = [
   {
     id: 'discover',
     title: '1. Discover',

@@ -31,7 +31,7 @@
   }
 
   .heading-lead {
-    @apply flex flex-col items-center text-center;
+    @apply mx-auto flex max-w-[62.5rem] flex-col items-center text-center;
   }
 
   .heading-lead__title {

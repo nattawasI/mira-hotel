@@ -4,8 +4,8 @@
 import { useState } from 'react'
 
 /** components */
-import WhyInvestAccordion from '@/modules/investment/templates/why-invest/why-invest-accordion'
-import WhyInvestSlide from '@/modules/investment/templates/why-invest/why-invest-slide'
+import WhyInvestAccordion from '@/modules/investment/components/why-invest-accordion'
+import WhyInvestSlide from '@/modules/investment/components/why-invest-slide'
 
 /** hooks */
 import { useMediaQuery } from '@mantine/hooks'

@@ -21,10 +21,10 @@ const WhyInvestAccordion = (props: WhyInvestAccordionProps): JSX.Element => {
 
   return (
     <>
-      <h2 className="title-uppercase text-base mb-1">Why Invest with Mira?</h2>
+      <h2 className="title-uppercase mb-1 text-base">Why Invest with Mira?</h2>
       <Accordion.Root type="single" collapsible value={active} onValueChange={setActive}>
         {data.map((item, index) => (
-          <Accordion.Item key={item.id} className="border-base border-t first:border-0" value={index.toString()}>
+          <Accordion.Item key={item.id} className="border-t border-base first:border-0" value={index.toString()}>
             <Accordion.Header>
               <Accordion.Trigger asChild>
                 <WhyInvestButton className="group data-[state=open]:text-secondary">
