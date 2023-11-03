@@ -1,5 +1,3 @@
-'use client'
-
 /** components */
 import YourPathCard from '@/modules/investment/components/your-path-card'
 
