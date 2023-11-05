@@ -1,4 +1,5 @@
 /** libs */
+import { cln } from '@/libs/utils'
 import Image from 'next/image'
 
 /** components */
@@ -25,7 +26,14 @@ const Hero = (): JSX.Element => {
           </Button>
         </div>
       </div>
-      <div className="relative h-[19.125rem] sm:h-[37.5rem] lg:h-full">
+      <div
+        className={cln(
+          'relative h-[19.125rem] sm:h-[37.5rem] lg:h-full',
+          'sm:after:bg-[linear-gradient(180deg,_#CA9214_0%,_rgba(202,146,20,0.00)_46%)]',
+          'lg:after:bg-[linear-gradient(180deg,_#CA9214_0%,_rgba(202,146,20,0.00)_56.83%)]',
+          'after:absolute after:inset-0 after:z-10 after:content-[""]',
+        )}
+      >
         <Image
           src="/investment/investment-hero.jpg"
           alt="Embark on your investment journey"
