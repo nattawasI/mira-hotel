@@ -16,9 +16,12 @@ const Header = (props: HeaderProps): JSX.Element => {
   return (
     <header
       {...restProps}
-      className={cln('fixed left-0 top-0 z-30 flex w-full justify-between px-1.25 pt-1.75 md:px-2', className)}
+      className={cln(
+        'fixed left-0 top-0 z-30 flex w-full items-center justify-between px-1.25 pt-1.5 backdrop-blur-[3px] md:px-2',
+        className,
+      )}
     >
-      <Link href="/" className="focus-visible:outline-base">
+      <Link href="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="87" height="26" viewBox="0 0 87 26" fill="none">
           <g clipPath="url(#clip0_102_257)">
             <path
