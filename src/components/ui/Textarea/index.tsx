@@ -12,7 +12,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>((props, forwarde
       {...restProps}
       ref={forwardedRef}
       className={cln(
-        'placeholder:text-black-50 resize-none rounded-lg border border-black bg-transparent p-1 text-0.875 focus:border-primary',
+        'resize-none rounded-lg border border-black-50 bg-transparent p-1 text-0.875 placeholder:text-black-50 focus:border-black',
         className,
       )}
     />

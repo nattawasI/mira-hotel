@@ -23,7 +23,7 @@ const RoomSlide = (): JSX.Element => {
     >
       {imageList.map((item, index) => (
         <SplideSlide
-          className="relative aspect-square overflow-hidden first:rounded-l-xl last:rounded-r-xl md:aspect-video lg:aspect-square"
+          className="relative aspect-square cursor-zoom-in overflow-hidden first:rounded-l-xl last:rounded-r-xl md:aspect-video lg:aspect-square"
           key={index}
         >
           <Image src={item} alt="" fill className="object-cover object-center" />
