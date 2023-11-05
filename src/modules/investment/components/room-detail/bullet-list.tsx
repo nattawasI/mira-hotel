@@ -11,7 +11,7 @@ const BulletList = (props: BulletListProps): JSX.Element => {
   return (
     <div {...restProps}>
       <div className="mb-0.5 font-medium capitalize">{title}</div>
-      <ul className="list-inside list-disc pl-0.75">
+      <ul className="ml-1.75 list-disc">
         {list.map((item, index) => (
           <li key={index} className="capitalize">
             {item}

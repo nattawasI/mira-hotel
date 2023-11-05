@@ -31,12 +31,14 @@ const RoomDetail = (): JSX.Element => {
         />
         <BulletList
           title="Investment highlights"
-          list={['Private beach access', 'Private pool', 'Modern interiors', 'Self-check in']}
+          list={[
+            'Prime beachfront location',
+            'Expected high rental yields',
+            'Strong tourism growth',
+            'Strategic marketing & management',
+          ]}
         />
-        <BulletList
-          title="Amenities"
-          list={['Private beach access', 'Private pool', 'Modern interiors', 'Self-check in']}
-        />
+        <BulletList title="Projected returns" list={['Rental income estimates', 'Expected appreciation value']} />
       </div>
     </div>
   )

@@ -41,6 +41,8 @@ module.exports = {
       'primary-25': 'rgba(104, 102, 54, 0.25)',
       'primary-50': 'rgba(104, 102, 54, 0.5)',
       base: '#D6CFC8',
+      'base-25': 'rgba(214, 207, 200, 0.25)',
+      'base-50': 'rgba(214, 207, 200, 0.50)',
       secondary: '#CA9214',
       'secondary-25': 'rgba(202, 146, 20, 0.25)',
       'secondary-50': 'rgba(202, 146, 20, 0.5)',
