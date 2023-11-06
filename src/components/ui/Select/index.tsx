@@ -16,7 +16,7 @@ const SelectRoot = forwardRef<HTMLButtonElement, SelectProps>((props, forwardedR
         ref={forwardedRef}
         className={cln(
           'flex h-[3.125rem] items-center justify-between rounded-lg border border-black-50 bg-transparent px-1 text-0.875',
-          'focus:border-primary focus:outline-none',
+          'focus:border-black focus:outline-none',
           'data-[placeholder]:text-black-50',
           'data-[state=open]:border-black',
           className,

@@ -1,6 +1,7 @@
 /** components */
 import Hero from '@/modules/investment/templates/hero'
 import UnlockingProsperity from '@/modules/investment/templates/unlocking-prosperity'
+import ParallaxSection from '@/modules/investment/templates/parallax-section'
 import Room from '@/modules/investment/templates/room'
 import WhyInvest from '@/modules/investment/templates/why-invest'
 import YourPathToSuccess from '@/modules/investment/templates/your-path-to-success'
@@ -13,6 +14,7 @@ const InvestmentTemplate = () => {
     <>
       <Hero />
       <UnlockingProsperity />
+      <ParallaxSection />
       <Room />
       <WhyInvest />
       <YourPathToSuccess />
