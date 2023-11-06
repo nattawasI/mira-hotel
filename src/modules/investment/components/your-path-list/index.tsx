@@ -1,9 +1,5 @@
-// 'use client'
-
 /** libs */
-// import { useRef, MutableRefObject } from 'react'
 import { cln } from '@/libs/utils'
-// import { useDraggable } from 'react-use-draggable-scroll'
 
 /** components */
 import YourPathCard from '@/modules/investment/components/your-path-card'
@@ -43,14 +39,6 @@ const dataList: YourPathItemType[] = [
 ]
 
 const YourPathList = (): JSX.Element => {
-  // const scrollerRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDivElement>
-  // const containerRef = useRef<HTMLDivElement>(null)
-
-  // const { events } = useDraggable(scrollerRef, {
-  //   applyRubberBandEffect: true,
-  //   isMounted: true,
-  // })
-
   return (
     <div className="content-container no-scrollbar overflow-x-auto">
       <div className="flex gap-x-1 lg:gap-x-2">
