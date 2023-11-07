@@ -36,12 +36,12 @@ const WhyInvestSlide = (props: WhyInvestSlideProps): JSX.Element => {
   return (
     <div className="grid grid-cols-2 gap-x-4">
       <div className="flex flex-col justify-center">
-        <h2 className="title-uppercase text-base mb-1">Why Invest with Mira?</h2>
+        <h2 className="title-uppercase mb-1 text-base">Why Invest with Mira?</h2>
         <div>
           {data.map((item, index) => {
             const isActive = index === Number(active)
             return (
-              <div key={item.id} className="border-base border-t first:border-0">
+              <div key={item.id} className="border-t border-base first:border-0">
                 <WhyInvestButton isActive={isActive} onClick={() => handleSelect(index)}>
                   {item.title}
                   <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
@@ -62,8 +62,8 @@ const WhyInvestSlide = (props: WhyInvestSlideProps): JSX.Element => {
           ref={splideRef}
           options={{
             type: 'fade',
-            arrows: false,
             speed: 700,
+            arrows: false,
             drag: false,
             pagination: false,
           }}

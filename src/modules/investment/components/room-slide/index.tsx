@@ -1,7 +1,6 @@
 'use client'
 
 /** libs */
-import { cln } from '@/libs/utils'
 import Image from 'next/image'
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css/core'
@@ -14,6 +13,7 @@ const imageList = ['/investment/room-detail-1.jpg', '/investment/room-detail-1.j
 const RoomSlide = (): JSX.Element => {
   return (
     <Splide
+      id="room-slide"
       className="group/room-slide aspect-square overflow-hidden rounded-xl md:aspect-video lg:aspect-square lg:flex-1"
       hasTrack={false}
       options={{
