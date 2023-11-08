@@ -2,7 +2,7 @@
 import { forwardRef } from 'react'
 
 /** types */
-import { IconProps } from '@/components/ui/Icon'
+import { IconProps } from '@/components/ui/icon'
 
 const NullIcon = forwardRef<SVGSVGElement, IconProps>(({ ...props }, forwardedRef): JSX.Element => {
   return (

@@ -5,7 +5,7 @@ import { VariantProps } from 'tailwind-variants'
 import Link, { type LinkProps } from 'next/link'
 
 /** styled */
-import { styled } from '@/components/ui/Button/styled'
+import { styled } from '@/components/ui/button/styled'
 
 type ButtonIconProps = {
   icon?: 'arrow-down' | 'arrow-right'

@@ -3,7 +3,7 @@ import { cln } from '@/libs/utils'
 import Image from 'next/image'
 
 /** components */
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 
 const Hero = (): JSX.Element => {
   return (

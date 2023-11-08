@@ -1,11 +1,11 @@
 'use client'
 
 /** components */
-import { Input } from '@/components/ui/Input'
-import { Select } from '@/components/ui/Select'
-import { Textarea } from '@/components/ui/Textarea'
-import { FormGroup } from '@/components/ui/FormGroup'
-import { Button } from '@/components/ui/Button'
+import { Input } from '@/components/ui/input'
+import { Select } from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
+import { FormGroup } from '@/components/ui/form-group'
+import { Button } from '@/components/ui/button'
 
 const ContactForm = (): JSX.Element => {
   return (

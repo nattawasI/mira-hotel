@@ -2,7 +2,7 @@
 import { forwardRef, SVGAttributes } from 'react'
 
 /** components */
-import NullIcon from '@/components/ui/Icon/NullIcon'
+import NullIcon from '@/components/ui/icon/null-icon'
 
 /** constants */
 const iconNameArray = ['null'] as const

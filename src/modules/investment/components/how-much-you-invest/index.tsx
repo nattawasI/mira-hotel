@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { NumericFormat } from 'react-number-format'
 
 /** components */
-import { Input } from '@/components/ui/Input'
-import { Slider } from '@/components/ui/Slider'
+import { Input } from '@/components/ui/input'
+import { Slider } from '@/components/ui/slider'
 
 const HowMuchYouInvest = (): JSX.Element => {
   return (
@@ -29,12 +29,12 @@ const HowMuchYouInvest = (): JSX.Element => {
         <div className="grid grid-cols-1 max-sm:gap-1.5 sm:grid-cols-2">
           <div>
             <div className="text-1 font-medium">Equity</div>
-            <div className="sm:text-2.25 text-2 font-medium">$68,820</div>
+            <div className="text-2 font-medium sm:text-2.25">$68,820</div>
             <div className="text-0.875">4% appreciation/year.</div>
           </div>
           <div>
             <div className="text-1 font-medium">Passive income</div>
-            <div className="sm:text-2.25 text-2 font-medium">$105,197</div>
+            <div className="text-2 font-medium sm:text-2.25">$105,197</div>
             <div className="text-0.875">Total</div>
           </div>
         </div>
