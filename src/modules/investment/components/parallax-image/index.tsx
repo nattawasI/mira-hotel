@@ -1,22 +1,19 @@
-'use client'
-
 /** libs */
-import { useRef } from 'react'
 import Image from 'next/image'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useParallax } from 'react-scroll-parallax'
 
 const ParallaxImage = (): JSX.Element => {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+  const { ref: parallaxRef } = useParallax<HTMLImageElement>({ speed: -50 })
 
   return (
-    <motion.div style={{ y }}>
-      <Image src="/investment/locations.jpg" alt="" width={1440} height={717} className="h-auto w-full" />
-    </motion.div>
+    <Image
+      ref={parallaxRef}
+      src="/investment/locations.jpg"
+      alt=""
+      width={1440}
+      height={717}
+      className="absolute left-0 top-0 h-auto w-full"
+    />
   )
 }
 
