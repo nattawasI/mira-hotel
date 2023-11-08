@@ -13,7 +13,7 @@ const ArrowButton = forwardRef<HTMLButtonElement, ArrowButtonProps>((props, forw
       {...restProps}
       ref={forwardedRef}
       type={type}
-      className={cln('bg-black-70 flex h-2.5 w-2.5 items-center justify-center rounded-full', className)}
+      className={cln('flex h-2.5 w-2.5 items-center justify-center rounded-full bg-black-70', className)}
     >
       {dir === 'prev' ? (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -36,4 +36,4 @@ const ArrowButton = forwardRef<HTMLButtonElement, ArrowButtonProps>((props, forw
 
 ArrowButton.displayName = 'ArrowButton'
 
-export default ArrowButton
+export { ArrowButton, type ArrowButtonProps }
