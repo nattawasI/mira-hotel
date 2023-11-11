@@ -1,22 +1,32 @@
 'use client'
 
 /** libs */
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css/core'
 
 /** components */
 import { CircleIconButton } from '@/components/ui/circle-icon-button'
-import RoomLargeImageDialog from '@/modules/investment/components/room-large-image-dialog'
+import RoomLightBox from '@/modules/investment/components/room-lightbox'
 
 const imageList = ['/investment/room-detail-1.jpg', '/investment/room-detail-1.jpg', '/investment/room-detail-1.jpg']
 
 const RoomSlide = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const mainSlideRef = useRef<Splide>(null)
+
+  const [active, setActive] = useState<number>(0)
+  const [openLightBox, setOpenLightBox] = useState<boolean>(false)
+
+  const handleClickSlide = (index: number) => {
+    setActive(index)
+    setOpenLightBox(true)
+  }
+
   return (
     <>
       <Splide
+        ref={mainSlideRef}
         className="group/room-slide aspect-square overflow-hidden rounded-xl md:aspect-video lg:aspect-square lg:flex-1"
         hasTrack={false}
         options={{
@@ -31,8 +41,15 @@ const RoomSlide = (): JSX.Element => {
             <SplideSlide
               className="relative aspect-square cursor-zoom-in overflow-hidden first:rounded-l-xl last:rounded-r-xl md:aspect-video lg:aspect-square"
               key={index}
+              onClick={() => handleClickSlide(index)}
             >
-              <Image src={item} alt="" fill className="object-cover object-center" />
+              <Image
+                src={item}
+                alt=""
+                fill
+                sizes="100vw, (min-width: 1024px) 50vw"
+                className="object-cover object-center"
+              />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -63,7 +80,13 @@ const RoomSlide = (): JSX.Element => {
           />
         </div>
       </Splide>
-      <RoomLargeImageDialog images={imageList} />
+      <RoomLightBox
+        open={openLightBox}
+        onOpenChange={setOpenLightBox}
+        images={imageList}
+        start={active}
+        mainSlideRef={mainSlideRef}
+      />
     </>
   )
 }

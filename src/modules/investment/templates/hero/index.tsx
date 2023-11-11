@@ -38,6 +38,8 @@ const Hero = (): JSX.Element => {
           src="/investment/investment-hero.jpg"
           alt="Embark on your investment journey"
           fill
+          sizes="100vw, (min-width: 1024px) 50vw"
+          priority
           className="object-cover object-bottom"
         />
       </div>

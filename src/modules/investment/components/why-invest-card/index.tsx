@@ -16,14 +16,20 @@ const WhyInvestCard = (props: WhyInvestCardProps) => {
       {...restProps}
       className={cln('relative aspect-square overflow-hidden rounded-xl sm:aspect-video lg:aspect-square', className)}
     >
-      <Image src={srcImage} alt={title ?? ''} fill className="object-cover object-center" />
+      <Image
+        src={srcImage}
+        alt={title ?? ''}
+        fill
+        sizes="100vw, (min-width: 1024px) 50vw"
+        className="object-cover object-center"
+      />
       <div
         className={cln(
           'absolute bottom-0 left-0 w-full overflow-hidden px-1.25 py-1.5 lg:px-2',
           'before:absolute before:inset-0 before:bg-[rgba(15,15,15,0.50)] before:backdrop-blur-sm before:content-[""]',
         )}
       >
-        <div className="text-base relative flex flex-col gap-0.5">
+        <div className="relative flex flex-col gap-0.5 text-base">
           <h4 className="text-1 font-medium lg:text-1.25">{title}</h4>
           <p className="text-0.875 lg:text-1">{description}</p>
         </div>
