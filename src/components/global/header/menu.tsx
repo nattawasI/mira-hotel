@@ -6,30 +6,6 @@ import Link from 'next/link'
 import * as Dialog from '@radix-ui/react-dialog'
 import { AnimatePresence, motion } from 'framer-motion'
 
-type MenuType = {
-  label: string
-  href: string
-}
-
-const menus: MenuType[] = [
-  {
-    label: 'Brand',
-    href: '/brand',
-  },
-  {
-    label: 'Investment',
-    href: '/investment',
-  },
-  {
-    label: 'FAQ',
-    href: '/faq',
-  },
-  {
-    label: 'Contact Us',
-    href: '/contact',
-  },
-]
-
 const animateDuration = 250
 const motionValue = {
   hidden: { transform: 'translateX(calc(100%))', transition: { duration: animateDuration / 1000 } },
@@ -73,15 +49,30 @@ const Menu = ({ theme }: MenuProps): JSX.Element => {
                   </svg>
                 </Dialog.Close>
                 <div className="flex flex-col py-1">
-                  {menus.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                  <Link
+                    href="/brand"
+                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
+                  >
+                    Brand
+                  </Link>
+                  <Link
+                    href="/investment"
+                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
+                  >
+                    Investment
+                  </Link>
+                  <button
+                    type="button"
+                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
+                  >
+                    FAQ
+                  </button>
+                  <button
+                    type="button"
+                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
+                  >
+                    Contact Us
+                  </button>
                 </div>
               </motion.div>
             </Dialog.Content>
