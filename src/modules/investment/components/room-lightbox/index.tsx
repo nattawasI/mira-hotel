@@ -68,8 +68,14 @@ const RoomLightBox = (props: RoomLightBoxProps): JSX.Element => {
                 >
                   <SplideTrack>
                     {images.map((item, index) => (
-                      <SplideSlide className="flex max-h-[calc(100dvh-3rem)] items-center justify-center" key={index}>
-                        <Image src={item} alt="" width={994} height={994} className="max-h-full w-auto max-w-full" />
+                      <SplideSlide className="flex h-[calc(100dvh-3rem)] items-center justify-center" key={index}>
+                        <Image
+                          src={item}
+                          alt=""
+                          width={1000}
+                          height={1000}
+                          className="h-full max-h-full w-auto max-w-full"
+                        />
                       </SplideSlide>
                     ))}
                   </SplideTrack>
