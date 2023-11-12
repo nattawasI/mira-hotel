@@ -1,6 +1,7 @@
 'use client'
 
 /** libs */
+import { useState } from 'react'
 import Link from 'next/link'
 import { NumericFormat } from 'react-number-format'
 
@@ -9,6 +10,7 @@ import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
 
 const HowMuchYouInvest = (): JSX.Element => {
+  const [value, setValue] = useState<number[]>([0])
   return (
     <div className="flex flex-col justify-between rounded-xl bg-white p-2">
       <div>
@@ -23,9 +25,13 @@ const HowMuchYouInvest = (): JSX.Element => {
           thousandSeparator=","
           decimalScale={2}
           prefix={'$'}
+          value={value[0]}
+          onValueChange={({ floatValue }) => {
+            setValue([floatValue ?? 0])
+          }}
         />
         <div className="text-1.25 font-medium">Time horizon</div>
-        <Slider className="mb-2" />
+        <Slider className="mb-2" max={1000000} value={value} onValueChange={setValue} />
         <div className="grid grid-cols-1 max-sm:gap-1.5 sm:grid-cols-2">
           <div>
             <div className="text-1 font-medium">Equity</div>
