@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { cln } from '@/libs/utils'
 
 /** components */
-import Menu from '@/components/global/header/menu'
+import Menu from '@/components/global/menu'
 
 /** types */
 import { ThemeProps } from '@/components/global/types'

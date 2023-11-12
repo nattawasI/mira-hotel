@@ -3,8 +3,38 @@
 /** libs */
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import * as Dialog from '@radix-ui/react-dialog'
 import { AnimatePresence, motion } from 'framer-motion'
+
+type MenuItemType = {
+  id: string
+  label: string
+  href: string
+}
+
+const menuList: MenuItemType[] = [
+  {
+    id: 'brand',
+    label: 'Brand',
+    href: '/brand',
+  },
+  {
+    id: 'investment',
+    label: 'Investment',
+    href: '/investment',
+  },
+  {
+    id: 'faq',
+    label: 'FAQ',
+    href: '/investment/#faq',
+  },
+  {
+    id: 'contact-us',
+    label: 'Contact Us',
+    href: '/investment/#contact-us',
+  },
+]
 
 const animateDuration = 250
 const motionValue = {
@@ -17,7 +47,10 @@ type MenuProps = {
 }
 
 const Menu = ({ theme }: MenuProps): JSX.Element => {
+  const pathname = usePathname()
+
   const [open, setOpen] = useState<boolean>(false)
+
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger className="flex h-[3.25rem] w-[3.25rem] items-center justify-center rounded-lg bg-[rgba(233,227,220,0.40)]">
@@ -49,30 +82,16 @@ const Menu = ({ theme }: MenuProps): JSX.Element => {
                   </svg>
                 </Dialog.Close>
                 <div className="flex flex-col py-1">
-                  <Link
-                    href="/brand"
-                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
-                  >
-                    Brand
-                  </Link>
-                  <Link
-                    href="/investment"
-                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
-                  >
-                    Investment
-                  </Link>
-                  <button
-                    type="button"
-                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
-                  >
-                    FAQ
-                  </button>
-                  <button
-                    type="button"
-                    className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
-                  >
-                    Contact Us
-                  </button>
+                  {menuList.map((item) => (
+                    <Link
+                      key={item.id}
+                      href={item.href}
+                      className="transition-colors-150 block py-0.5 text-2 capitalize hover:text-primary"
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
               </motion.div>
             </Dialog.Content>

@@ -6,6 +6,9 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply min-h-screen overflow-x-hidden font-general text-1 font-normal text-black;
   }
