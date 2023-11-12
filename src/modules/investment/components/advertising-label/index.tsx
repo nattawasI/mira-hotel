@@ -7,7 +7,7 @@ type LabelProps = HTMLAttributes<HTMLDivElement> & {
   icon?: LabelIconType
 }
 
-const ParallaxLabel = (props: LabelProps): JSX.Element => {
+const AdvertisingLabel = (props: LabelProps): JSX.Element => {
   const { icon = 'home', className, children, ...restProps } = props
 
   const iconEl: Record<LabelIconType, JSX.Element> = {
@@ -69,4 +69,4 @@ const ParallaxLabel = (props: LabelProps): JSX.Element => {
   )
 }
 
-export default ParallaxLabel
+export default AdvertisingLabel

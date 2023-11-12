@@ -1,7 +1,7 @@
 'use client'
 
 /** libs */
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css/core'
@@ -27,7 +27,7 @@ const RoomSlide = (): JSX.Element => {
     <>
       <Splide
         ref={mainSlideRef}
-        className="group/room-slide aspect-square overflow-hidden rounded-xl md:aspect-video lg:aspect-square lg:flex-1"
+        className="group/room-slide aspect-square overflow-hidden rounded-xl bg-black-25 md:aspect-video lg:aspect-square lg:flex-1"
         hasTrack={false}
         options={{
           classes: {
