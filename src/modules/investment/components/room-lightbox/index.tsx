@@ -3,10 +3,10 @@
 /** libs */
 import { useState, useEffect, RefObject } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import Image from 'next/image'
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css/core'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image, { type ImageProps } from 'next/image'
 
 /** components */
 import { CircleIconButton } from '@/components/ui/circle-icon-button'
@@ -68,8 +68,11 @@ const RoomLightBox = (props: RoomLightBoxProps): JSX.Element => {
                 >
                   <SplideTrack>
                     {images.map((item, index) => (
-                      <SplideSlide className="flex h-[calc(100dvh-3rem)] items-center justify-center" key={index}>
-                        <Image src={item} alt="" width={1000} height={1000} className="max-h-full w-auto max-w-full" />
+                      <SplideSlide
+                        className="flex h-[calc(100dvh-3rem)] min-w-[500px] items-center justify-center"
+                        key={index}
+                      >
+                        <Image className="h-full w-auto" src={item} alt="" width={1000} height={1000} sizes="100vw" />
                       </SplideSlide>
                     ))}
                   </SplideTrack>

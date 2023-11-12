@@ -3,7 +3,7 @@ import { cln } from '@/libs/utils'
 import Image from 'next/image'
 
 /** components */
-import { Button } from '@/components/ui/button'
+import { ButtonLink } from '@/components/ui/button'
 
 const Hero = (): JSX.Element => {
   return (
@@ -21,9 +21,9 @@ const Hero = (): JSX.Element => {
             <br />
             Unveil a realm of endless possibilities where your investments can flourish.
           </p>
-          <Button icon="arrow-down" className="mt-2 max-w-[23rem]">
+          <ButtonLink href="/investment/#why-invest" icon="arrow-down" className="mt-2 max-w-[23rem]">
             Investment opportunities
-          </Button>
+          </ButtonLink>
         </div>
       </div>
       <div
