@@ -50,7 +50,7 @@ const WhyInvest = (): JSX.Element => {
   const [active, setActive] = useState<string>('0')
 
   return (
-    <div id="why-invest" className="content-container min-h-[500px] min-w-[500px] py-2">
+    <div id="why-invest" className="content-container py-2">
       {typeof isDesktop !== 'undefined' ? (
         <div className="rounded-xl bg-primary px-1.25 py-1.5 lg:px-3">
           {isDesktop ? (

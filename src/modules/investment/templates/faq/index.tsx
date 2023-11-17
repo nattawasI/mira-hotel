@@ -1,5 +1,5 @@
 /** components */
-import FaqList from '@/modules/investment/components/FaqList'
+import FaqList from '@/modules/investment/components/faq-list'
 
 const Faq = (): JSX.Element => {
   return (
